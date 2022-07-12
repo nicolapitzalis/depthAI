@@ -38,6 +38,7 @@ def mat_to_csv(path):
         img_width = 1920
         img_height = 1080
         for bbox in bboxes:
+            id = int(bbox[0])
             xmin = int(bbox[1])
             ymin = int(bbox[2])
             xmax = xmin + int(bbox[3])
@@ -48,6 +49,7 @@ def mat_to_csv(path):
                 img_width,
                 img_height,
                 "person",
+                id,
                 xmin,
                 ymin,
                 xmax,
@@ -61,6 +63,7 @@ def mat_to_csv(path):
         "width",
         "height",
         "class",
+        "id",
         "xmin",
         "ymin",
         "xmax",
